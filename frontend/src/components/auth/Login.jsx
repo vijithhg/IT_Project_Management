@@ -32,21 +32,22 @@ const Login = () => {
 
     return (
         <>
-            <h2>Login</h2>
-            <section>
+            <section className="vh-100 ">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-5">Image</div>
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-5">
+                            <img src="./public/login-banner.jpg" className="img-fluid"/>
+                        </div>
                         <div className="col-7">
                             <form onSubmit={submitHandler}>
                                 <fieldset>
-                                    <legend>Login Form</legend>
-                                    <div>
-                                        <label htmlFor="email" className="d-block text-start">Email:</label>
+                                    <legend className="text-center">Login Form</legend>
+                                    <div className="mb-3">
+                                        <label htmlFor="email" className=" form-label">Email:</label>
                                         <input type="email" id="email" className="form-control" onChange={e=>setFormData({...formData,email:e.target.value})} value={formData.email} />
                                     </div>
-                                    <div>
-                                        <label htmlFor="password" className="d-block text-start">Password:</label>
+                                    <div className="mb-3">
+                                        <label htmlFor="password" className="form-label ">Password:</label>
                                         <input type="password" className="form-control" id="password" onChange={e=>setFormData({...formData,password:e.target.value})} value={formData.password}/>
                                     </div>
                                     <button type="submit" className="btn btn-primary w-100">Login</button>

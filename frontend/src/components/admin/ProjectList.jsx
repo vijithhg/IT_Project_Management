@@ -38,7 +38,7 @@ const ProjectList = () => {
     <div>
       <AddProject/>
       
-      <table className="table">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th>Project Name</th>
@@ -54,7 +54,7 @@ const ProjectList = () => {
                 <td>{projectName}</td>
                 <td>{createdAt}</td>
                 <td>
-                  <button onClick={()=>submitHandler(projectId)}>
+                  <button className="btn btn-outline-primary" onClick={()=>submitHandler(projectId)}>
                     Assign Members
                   </button>
                 </td>
